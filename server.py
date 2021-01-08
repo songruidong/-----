@@ -44,6 +44,7 @@ class Server(object):
             # sock, addr = self.mysocket.accept()
             data, addr = self.mysocket.recvfrom(1024)
             print(n,":")
+            n+=1
             # print('Received from %s:%s.' % addr))
             # 创建新线程来处理TCP连接:
             t = threading.Thread(target=self.handle, args=(data, addr))
